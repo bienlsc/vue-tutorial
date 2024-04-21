@@ -1,0 +1,35 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Learning Vue</title>
+  <script src="https://unpkg.com/vue@3.0.0"></script>
+  <link rel="stylesheet" type="text/css" href="css/styles.css">
+</head>
+<body>
+  <h1>Hello, Bien :)</h1>
+
+  <div id="app">
+    <div v-if="showChars">
+      <ul>
+        <li v-for="cartoonChar in cartoonChars" :class="{ fav: cartoonChar.isFav }" @click="toggleFav(cartoonChar)">
+          <img :src="cartoonChar.img" :alt="cartoonChar.title">
+          <h3>{{ cartoonChar.character }}</h3>
+          <p>{{ cartoonChar.species }}</p>
+        </li>
+      </ul>
+    </div>
+    <div v-else>
+      <p>Click the button below to show character</p>
+    </div>
+    
+    <button @click="toggleShowBooks">
+      <span v-if="showChars">Hide character</span>
+      <span v-else>Show character</span>
+    </button></li>
+  </div>
+
+
+  <script src="app.js"></script>
+</body>
+</html></div></button>
